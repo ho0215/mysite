@@ -1,3 +1,4 @@
+
 name: Test and Deploy Django
 
 on:
@@ -343,6 +344,7 @@ jobs:
           fi
 
           read -r -d '' REMOTE_SCRIPT <<SCRIPT || true
+          #!/bin/bash
           set -Eeuo pipefail
 
           PROJECT_DIR="$PROJECT_DIR"
@@ -592,6 +594,7 @@ jobs:
           set -Eeuo pipefail
 
           read -r -d '' REMOTE_SCRIPT <<SCRIPT || true
+          #!/bin/bash
           set -Eeuo pipefail
 
           PROJECT_DIR="$PROJECT_DIR"
@@ -743,6 +746,7 @@ jobs:
           set -Eeuo pipefail
 
           read -r -d '' REMOTE_SCRIPT <<SCRIPT || true
+          #!/bin/bash
           set -Eeuo pipefail
 
           SERVICE_NAME="$GUNICORN_SERVICE"
