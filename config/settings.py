@@ -172,7 +172,7 @@ STATIC_URL = os.getenv(
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = env_path("MEDIA_ROOT", "media")
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_URL = "board:signin"
 LOGIN_REDIRECT_URL = "board:post_list"
 LOGOUT_REDIRECT_URL = "board:post_list"
