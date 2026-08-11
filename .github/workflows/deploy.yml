@@ -345,7 +345,7 @@ jobs:
 
           read -r -d '' REMOTE_SCRIPT <<SCRIPT || true
           #!/bin/bash
-          set -Eeuo pipefail
+          set -Eu pipefail
 
           PROJECT_DIR="$PROJECT_DIR"
           VENV_DIR="$VENV_DIR"
@@ -595,7 +595,7 @@ jobs:
 
           read -r -d '' REMOTE_SCRIPT <<SCRIPT || true
           #!/bin/bash
-          set -Eeuo pipefail
+          set -Eu pipefail
 
           PROJECT_DIR="$PROJECT_DIR"
           VENV_DIR="$VENV_DIR"
@@ -743,7 +743,7 @@ jobs:
         env:
           INSTANCE_IDS: ${{ steps.django_instances.outputs.instance_ids }}
         run: |
-          set -Eeuo pipefail
+          set -Eu pipefail
 
           read -r -d '' REMOTE_SCRIPT <<SCRIPT || true
           #!/bin/bash
