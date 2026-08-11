@@ -158,9 +158,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = env_path("STATIC_ROOT", "staticfiles")
-
+STATIC_URL = os.getenv(
+    "STATIC_URL",
+    "/static/"
+)
 # 외부 정적 파일 등록 시(프로젝트폴더/static)
 # COMMON_STATIC_DIR = BASE_DIR / "static"
 
